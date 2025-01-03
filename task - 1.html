@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive web page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #040404;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh; 
+            padding-top: 60px;
+        }
+        nav {
+            background-color: #95caee;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        nav .title {
+            color: black; 
+            font-size: 20px; 
+            font-weight: bold;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        nav a {
+            color: black;
+            margin: 0 30px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #05249f; 
+            font-weight: bold;
+        }
+        .lang-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            flex-grow: 1; 
+            width: 100%;
+        }
+        .lang { 
+            display: flex; 
+            justify-content: space-around; 
+            padding: 20px; gap: 20px; 
+            padding-bottom: 30px;
+            width: 80%;
+        }
+        .lang div {
+            background-color: #05249f;
+            color: azure;
+            border: 1px solid #0f0e0e;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(20, 19, 19, 0.1);
+        }
+        .lang div:hover {
+            transform: scale(1.2);
+        }
+        h1,h2 {
+            color: #95caee;
+            font-family:'Times New Roman', Times, serif;
+        }
+        p {
+            color: #95caee;
+        }
+        .home-text { 
+            background-color: rgb(44, 43, 43); 
+            color: #95caee; 
+            padding: 20px; 
+            width: 80%; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin: 20px 0;
+        }
+        .about { 
+            background-color: rgb(44, 43, 43); 
+            color: #95caee; 
+            padding: 20px; 
+            width: 80%; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin: 20px 0; 
+            padding-top: 35px;
+        } 
+        .about h2 { 
+            text-align: center; 
+            color: #95caee; 
+        } 
+        .about p { 
+            color: #95caee;
+            text-align: justify; 
+        }
+        .membership { 
+            background-color: rgb(44, 43, 43); 
+            color: #95caee; 
+            padding: 20px; 
+            width: 80%; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin: 20px 0; 
+            padding-top: 35px;
+        } 
+        .membership h2 { 
+            text-align: center; 
+            color: #95caee; 
+        } 
+        .membership p { 
+            text-align: justify; 
+        }
+        .contact-container { 
+            background-color: rgb(44, 43, 43); 
+            color: #95caee; 
+            padding: 20px; 
+            width: 80%; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin: 20px 0; 
+        } 
+        .contact-container h2 { 
+            text-align: center; 
+            color: #95caee; 
+        } 
+        .contact-container p { 
+            text-align: justify; 
+        }
+        .contact-container a {
+        color: rgb(255, 147, 47); 
+        text-decoration: none; 
+        }
+
+        .contact-container a:hover {
+        color: rgb(255, 147, 47);
+        font-weight: bold; 
+        }
+        
+        footer {
+            background-color: white;
+            width: 100%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Techtonic</div>
+        <div class="buttons">
+            <a href="javascript:void(0)" onclick="navigate('home')">Home</a>
+            <a href="javascript:void(0)" onclick="navigate('about')">About</a>
+            <a href="javascript:void(0)" onclick="navigate('membership')">Membership</a>
+            <a href="javascript:void(0)" onclick="navigate('contact')">Contact</a>
+        </div>
+    </nav>
+    <div class="content" id="home">
+            <h1>Welcome to Techtonic!</h1> 
+            <h1>Learn Programming Languages</h1>
+            <div class="home-text"> 
+            <p>At Techtonic, we believe that anyone can learn to code, and we're here to provide the resources and support you need to succeed. Whether you're just starting out or looking to advance your skills, our platform offers a wealth of knowledge and interactive tools to help you on your journey.</p>  
+            <p>Explore our extensive library of tutorials and guides on various programming languages, including Python, JavaScript, Java, C++, and more. Engage with our community through forums and live sessions, and gain access to exclusive content by becoming a member.</p> 
+            <p>With Techtonic, you'll have the opportunity to learn at your own pace, connect with fellow learners, and receive personalized guidance from experienced instructors. Join us and take the first step towards mastering the art of programming.</p>
+    </div>
+    <div class="lang">
+            <div>C</div>
+            <div>C++</div>
+            <div>CSS</div>
+            <div>HTML</div>
+            <div>Java</div>
+            <div>JavaScript</div>
+            <div>Python</div>
+    </div>
+    </div>
+    <div class="about" id="about"> 
+        <h2>About Techtonic</h2> 
+        <p>Welcome to Techtonic! Our website is dedicated to providing high-quality resources and information on various programming languages. Whether you're a beginner looking to learn your first language or an experienced developer seeking to expand your knowledge, Techtonic has something for everyone. Explore tutorials, guides, and interactive content designed to help you master the world of programming. Join our community and take your coding skills to the next level with Techtonic! </p>
+        <p>We offer a variety of learning resources, including video tutorials, interactive coding exercises, and comprehensive guides. Our content is constantly updated to reflect the latest industry trends and best practices, ensuring that you stay ahead of the curve.</p> 
+        <p>At Techtonic, we believe in the power of community. Our forums and chat rooms provide a space for learners to connect, share knowledge, and support each other. Whether you're looking for help with a specific problem or want to share your latest project, our community is here for you.</p> <p>In addition to our free resources, we offer a premium membership that gives you access to exclusive content, personalized mentorship, and priority support. Our members also receive invitations to special events, such as coding bootcamps and hackathons.</p> 
+        <p>We are committed to fostering an inclusive and supportive learning environment. Our content is designed to be beginner-friendly, but we also offer advanced tutorials for those looking to deepen their knowledge. No matter where you are in your coding journey, Techtonic has something to offer.</p> 
+    </div>
+    <div class="membership" id="membership"> 
+        <h2>Membership</h2> 
+        <p> Become a member of Techtonic to access exclusive content, participate in community events, and get personalized guidance on your programming journey. Membership benefits include access to advanced tutorials, one-on-one mentoring sessions, and priority support. Join us today and take your programming skills to new heights!</p>
+    </div>
+    <div class="contact-container" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feedback, or would like to get in touch with our team, please don't hesitate to reach out. We're here to help you with any inquiries you may have.</p>
+        <p><center>Email: support@techtonic.com</center></p>
+        <p><center>Phone: (123) 456-7890</center></p>
+        <p><center>Address: 123 Techtonic Street, Silicon Valley, CA</center></p>
+        <p><center>Follow us on social media for updates, news, and more:</center></p>
+        <p><center>Twitter: <a href="javascript:void(0)">@Techtonic</a></center></p>
+        <p><center>Instagram: <a href="javascript:void(0)">@techtonic_</a></center></p>
+        <p><center>LinkedIn: <a href="javascript:void(0)">Techtonic</a></center></p>
+    </div>
+        <footer>
+            <p><center><font size="4">&copy; Techtonic is completely fictional.</font></center></p>
+        </footer>
+    <script> 
+    function navigate(sectionId) { 
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' }); 
+        } 
+    </script>
+    
+</body>
+</html>
